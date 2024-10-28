@@ -29,17 +29,17 @@ class User extends conectarDB {
     }
 
     // Agregar un nuevo usuario
-    public function agregar_usuario($nombre, $correo, $password, $direccion, $telefono, $rol_id) {
-        $sql = "INSERT INTO Usuarios (nombre, correo, password, direccion, telefono, rol_id) 
-                VALUES (:nombre, :correo, :password, :direccion, :telefono, :rol_id)";
+    public function agregar_usuario($nombre, $correo, $contrasena, $direccion, $telefono, $rol_id) {
+        $sql = "INSERT INTO Usuarios (nombre, correo, contrasena, direccion, telefono, rol_id) 
+                VALUES (:nombre, :correo, :contrasena, :direccion, :telefono, :rol_id)";
         
-        // Hashear la contraseña antes de guardarla
-        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+        // Hashear la contrasena antes de guardarla
+        $hashedPassword = password_hash($contrasena, PASSWORD_BCRYPT);
 
         $guardar = $this->conn_db->prepare($sql);        
         $guardar->bindParam(':nombre', $nombre);    
         $guardar->bindParam(':correo', $correo);    
-        $guardar->bindParam(':password', $hashedPassword);    
+        $guardar->bindParam(':contrasena', $hashedPassword);    
         $guardar->bindParam(':direccion', $direccion);    
         $guardar->bindParam(':telefono', $telefono);
         $guardar->bindParam(':rol_id', $rol_id); 
@@ -51,16 +51,18 @@ class User extends conectarDB {
         return $resultado;
     }
 
+
+
     // Modificar un usuario existente
-    public function modificar_usuario($id, $nombre, $correo, $password, $direccion, $telefono) {
+    public function modificar_usuario($id, $nombre, $correo,$contrasena, $direccion, $telefono) {
         $sql = "UPDATE Usuarios SET 
-                nombre = :nombre, correo = :correo, password = :password, direccion = :direccion, telefono = :telefono
+                nombre = :nombre, correo = :correo, contrasena = :contrasena, direccion = :direccion, telefono = :telefono
                 WHERE usuario_id = :id";
         $modificar = $this->conn_db->prepare($sql);    
         $modificar->bindParam(':id', $id);        
         $modificar->bindParam(':nombre', $nombre);    
         $modificar->bindParam(':correo', $correo);    
-        $modificar->bindParam(':password', $password);  
+		$modificar->bindParam(':contrasena', $contrasena);  
         $modificar->bindParam(':direccion', $direccion);    
         $modificar->bindParam(':telefono', $telefono);    
         $modificar->execute();                    
@@ -69,24 +71,24 @@ class User extends conectarDB {
         return $result;
     }    
 
-    // Función para validar credenciales de usuario
-    public function validar_credenciales($correo, $password) {
-        $sql = "SELECT usuario_id, password FROM Usuarios WHERE correo = :correo";
+	// Función para validar credenciales de usuario
+    public function validar_credenciales($correo, $contrasena) {
+        $sql = "SELECT usuario_id, contrasena FROM Usuarios WHERE correo = :correo";
         $sentencia = $this->conn_db->prepare($sql);            
         $sentencia->bindParam(':correo', $correo);
         $sentencia->execute();
         $usuario = $sentencia->fetch(PDO::FETCH_ASSOC);
         $sentencia->closeCursor();
 
-        // Verificar si el usuario existe y validar la contraseña
-        if ($usuario && password_verify($password, $usuario['password'])) {
+        // Verificar si el usuario existe y validar la contrasena
+        if ($usuario && password_verify($contrasena, $usuario['contrasena'])) {
             return true;  
         } else {
-            return false;  
+            return password_verify($contrasena, $usuario['contrasena']);  
         }
     }
 
-    // Método para verificar si el usuario es admin
+	// Método para verificar si el usuario es admin
     public function user_rol($correo) {
         $sql = "SELECT rol_id FROM Usuarios WHERE correo = :correo";
         $sentencia = $this->conn_db->prepare($sql);
@@ -107,4 +109,8 @@ class User extends conectarDB {
         // Si el resultado es mayor que 0, el correo ya está registrado
         return $consulta->fetchColumn() > 0;
     }
+    
+
+   
+
 }

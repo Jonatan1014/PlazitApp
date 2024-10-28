@@ -37,6 +37,7 @@ if (
 
         // Ejecutar la operación de agregar usuario y guardar el resultado en la variable $operar
         $operar = $Usuario_class->agregar_usuario($full_name, $email, $pass, $address, $phone, $rol_id);
+        var_dump(value: $operar);
 
         // Redireccionar si la operación es exitosa
         if ($operar) {
@@ -67,4 +68,3 @@ if (
           </script>";
     exit();
 }
-var_dump()
