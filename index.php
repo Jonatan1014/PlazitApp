@@ -148,9 +148,8 @@ $products = $product->listar_productos(); // Obtener los datos de los products
                   </div>
                </div>
                <div class="d-flex justify-content-center align-items-center ">
-                  <form action="product-search.php">
                      <div class="input-group">
-                        <input class="form-control rounded" type="search" placeholder="Buscar productos..." />
+                        <input class="form-control rounded" type="search" name="fruta" placeholder="Buscar productos..." />
                         <span class="input-group-append">
                            <button class="btn bg-white border border-start-0 ms-n10 rounded-0 rounded-end" type="button">
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -162,7 +161,6 @@ $products = $product->listar_productos(); // Obtener los datos de los products
                            </button>
                         </span>
                      </div>
-                  </form>
                </div>
                <div>
                   <!-- select option -->
@@ -174,44 +172,11 @@ $products = $product->listar_productos(); // Obtener los datos de los products
                </div>
             </div>
 
-            <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
-               <?php
-               foreach ($products as $product) {
-                  echo "
-    <div class='col'>
-        <div class='card card-product'>
-            <div class='card-body'>
-                <div class='text-center position-relative'>
-                  <div class='position-absolute top-0 start-0'>
-                     <button' class='btn-action' data-bs-toggle='tooltip' data-bs-html='true' title='Favorito'><i class='bi bi-heart'></i></button>
-                  </div>
-                    <a href='#!'><img src='assets/images/products/product-img-6.jpg' alt='Grocery Ecommerce Template' class='mb-3 img-fluid' /></a>
-                    
-                </div>
-                
-                <h2 class='fs-6'><a href='pages/shop-single.html' class='text-inherit text-decoration-none'>{$product['nombre']}</a></h2>
-               
-                <div class='d-flex justify-content-between align-items-center mt-3'>
-                    <div class''>
-                        <span class='text-dark'>{$product['precio']}</span>
-                    </div>
-                    <div>
-                        <a href='#!' class='btn btn-primary btn-sm'>
-                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'>
-                                <line x1='12' y1='5' x2='12' y2='19'></line>
-                                <line x1='5' y1='12' x2='19' y2='12'></line>
-                            </svg>
-                            Add
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>";
-               }
-               ?>
+            <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3" id="resultados">
 
-
+            
+                     
+                  
                
             </div>
          </div>
@@ -279,6 +244,40 @@ $products = $product->listar_productos(); // Obtener los datos de los products
    <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
    <script src="assets/js/vendors/tns-slider.js"></script>
    <script src="assets/js/vendors/zoom.js"></script>
+
+   <script>
+        $(document).ready(function() {
+            // Función para cargar todos los libros al iniciar
+            function cargarLibros(fruta = '') {
+                $.ajax({
+                    url: 'action/product-search.php',
+                    type: 'POST',
+                    data: {
+                        fruta: fruta
+                    },
+                    success: function(response) {
+                        $('#resultados').html(response);
+                    },
+                    error: function() {
+                        $('#resultados').html(
+                            '<div class="alert alert-danger">Error al realizar la búsqueda.</div>'
+                            );
+                    }
+                });
+            }
+
+            // Cargar todos los libros al iniciar la página
+            cargarLibros();
+
+            // Función para hacer la búsqueda dinámica
+            $('input[name="fruta"]').on('keyup', function() {
+                var fruta = $(this).val();
+                cargarLibros(fruta); // Hacer la búsqueda en función del término ingresado
+            });
+        });
+        </script>
+
+
 </body>
 
 <!-- Mirrored from freshcart.codescandy.com/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 14:14:14 GMT -->
