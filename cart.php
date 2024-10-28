@@ -51,9 +51,9 @@
    <?php
    include("includes/navbar.php");
    ?>
-   
+
    <main>
-      
+
       <!-- section -->
       <section class="mb-lg-14 mb-8 mt-8">
          <div class="container">
@@ -72,7 +72,7 @@
             <div class="row">
                <div class="col-lg-8 col-md-7">
                   <div class="py-3">
-                     
+
                      <ul class="list-group list-group-flush">
                         <!-- list group -->
                         <li class="list-group-item py-3 ps-0 border-top">
@@ -414,27 +414,15 @@
                         <!-- text -->
                         <p>
                            <small>
-                              By placing your order, you agree to be bound by the Freshcart
-                              <a href="#!">Terms of Service</a>
-                              and
-                              <a href="#!">Privacy Policy.</a>
+                              Al realizar su pedido, acepta estar sujeto a PlazitApp
+                              <a href="#!">Términos de servicio</a>
+                              y 
+                              <a href="#!">Política de privacidad.</a>
                            </small>
                         </p>
 
                         <!-- heading -->
-                        <div class="mt-8">
-                           <h2 class="h5 mb-3">Add Promo or Gift Card</h2>
-                           <form>
-                              <div class="mb-2">
-                                 <!-- input -->
-                                 <label for="giftcard" class="form-label sr-only">Email address</label>
-                                 <input type="text" class="form-control" id="giftcard" placeholder="Promo or Gift Card" />
-                              </div>
-                              <!-- btn -->
-                              <div class="d-grid"><button type="submit" class="btn btn-outline-dark mb-1">Redeem</button></div>
-                              <p class="text-muted mb-0"><small>Terms & Conditions apply</small></p>
-                           </form>
-                        </div>
+                        
                      </div>
                   </div>
                </div>
