@@ -127,7 +127,7 @@ INSERT INTO Productos (nombre, descripcion, precio, stock, imagen_url, categoria
 ('Tomate Orgánico', 'Tomates orgánicos de alta calidad', 3.00, 50, 'https://example.com/images/tomate_organico.jpg', 3);
 
 -- Inserción de usuarios con roles
-INSERT INTO Usuarios (nombre, correo, contraseña, direccion, telefono, rol_id) VALUES
+INSERT INTO Usuarios (nombre, correo, contrasena, direccion, telefono, rol_id) VALUES
 ('Jonatan Cantillo', 'jonatan@gmail.com', PASSWORD('123'), 'Calle Falsa 123, Ciudad', '123456789', 1), -- admin
 ('Laura Perez', 'laura@gmail.com', PASSWORD('123'), 'Avenida Siempre Viva 456, Ciudad', '987654321', 2); -- user
 
