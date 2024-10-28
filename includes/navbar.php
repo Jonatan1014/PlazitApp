@@ -1,8 +1,8 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
-    <a class="navbar-brand brand-logo me-5" href="index.html"><img src="https://demo.bootstrapdash.com/skydash/themes/assets/images/logo-light.svg"
+    <a class="navbar-brand brand-logo me-5" href="index.php"><img src="../assets/images/LogoPlazitAppLetters.png"
         class="me-2" alt="logo" /></a>
-    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="https://demo.bootstrapdash.com/skydash/themes/assets/images/logo-mini.svg"
+    <a class="navbar-brand brand-logo-mini" href="index.php"><img src="../assets/images/LogoPlazitApp.png"
         alt="logo" /></a>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
