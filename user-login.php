@@ -72,14 +72,14 @@
                         <p>¡Bienvenido de nuevo a FreshCart! Ingresa tu correo electrónico para comenzar.</p>
                      </div>
 
-                     <form class="needs-validation" novalidate>
+                     <form class="needs-validation" method="post" action="action/user-login.php" novalidate>
                         <div class="row g-3">
                            <!-- fila -->
 
                            <div class="col-12">
                               <!-- campo de entrada -->
                               <label for="formSigninEmail" class="form-label visually-hidden">Dirección de correo electrónico</label>
-                              <input type="email" class="form-control" id="formSigninEmail" placeholder="Correo electrónico" required />
+                              <input type="email" name="email" class="form-control" id="formSigninEmail" placeholder="Correo electrónico" required />
                               <div class="invalid-feedback">Por favor, ingresa un nombre.</div>
                            </div>
                            <div class="col-12">
@@ -87,7 +87,7 @@
                               <div class="password-field position-relative">
                                  <label for="formSigninPassword" class="form-label visually-hidden">Contraseña</label>
                                  <div class="password-field position-relative">
-                                    <input type="password" class="form-control fakePassword" id="formSigninPassword" placeholder="*****" required />
+                                    <input type="password" name="password" class="form-control fakePassword" id="formSigninPassword" placeholder="*****" required />
                                     <span><i class="bi bi-eye-slash passwordToggler"></i></span>
                                     <div class="invalid-feedback">Por favor, ingresa la contraseña.</div>
                                  </div>
@@ -102,7 +102,7 @@
                            <!-- enlace -->
                            <div>
                               ¿No tienes una cuenta?
-                              <a href="signup.html">Regístrate</a>
+                              <a href="user-regster.php">Regístrate</a>
                            </div>
                         </div>
                      </form>
