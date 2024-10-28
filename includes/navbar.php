@@ -28,18 +28,20 @@
 
                         <div class="list-inline-item position-relative me-4">
                             <a class="nav-link dropdown-toggle d-inline" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false"><?php echo $user['nombre']  ?> </a>
+                                aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                 <circle cx="12" cy="7" r="4"></circle>
+                              </svg> </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pages/signin.html">Iniciar sesión</a></li>
-                                <li><a class="dropdown-item" href="pages/signup.html">Registrarse</a></li>
+                                <li><a class="dropdown-item" >Bienvendo</a></li>
+                                <li><a class="dropdown-item"><?php echo $user['nombre'] ?> </a></li>
                                 <li class="dropdown-submenu dropend">
                                     <a class="dropdown-item dropdown-toggle" href="#">Mi cuenta</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="pages/account-orders.html">Pedidos</a></li>
+                                       
                                         <li><a class="dropdown-item" href="user-account-settings.php">Configuración</a></li>
-                                        <li><a class="dropdown-item" href="pages/account-address.html">Dirección</a></li>
-                                        <li><a class="dropdown-item" href="pages/account-payment-method.html">Método de pago</a></li>
-                                        <li><a class="dropdown-item" href="pages/account-notification.html">Notificaciones</a></li>
+                                      
+                                      
                                     </ul>
                                 </li>
                             </ul>
@@ -74,16 +76,7 @@
                         </div>
 
                         <!-- Botón de Menú para Pantallas Pequeñas -->
-                        <div class="list-inline-item d-inline-block d-lg-none">
-                            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#navbar-default" aria-controls="navbar-default" aria-label="Abrir menú">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                    class="bi bi-text-indent-left text-primary" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6.354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                                </svg>
-                            </button>
-                        </div>
+                        
                     </div>
                 </div>
 
