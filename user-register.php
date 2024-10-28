@@ -76,12 +76,12 @@
                             <p>¡Bienvenido a FreshCart! Ingresa tu correo electrónico para comenzar.</p>
                         </div>
                         <!-- formulario -->
-                        <form class="needs-validation" novalidate>
+                        <form class="needs-validation" method="post" action="action/user-register.php" >
                             <div class="row g-3">
                                 <!-- Campo Nombre -->
                                 <div class="col">
                                     <label for="formSignupNombre" class="form-label visually-hidden">Nombre</label>
-                                    <input type="text" class="form-control" id="formSignupNombre" name="nombre"
+                                    <input type="text" class="form-control" id="formSignupNombre" name="name"
                                         placeholder="Nombre" required />
                                     <div class="invalid-feedback">Por favor, ingresa el nombre.</div>
                                 </div>
@@ -89,7 +89,7 @@
                                 <!-- Campo Apellido -->
                                 <div class="col">
                                     <label for="formSignupApellido" class="form-label visually-hidden">Apellido</label>
-                                    <input type="text" class="form-control" id="formSignupApellido" name="apellido"
+                                    <input type="text" class="form-control" id="formSignupApellido" name="last_name"
                                         placeholder="Apellido" required />
                                     <div class="invalid-feedback">Por favor, ingresa el apellido.</div>
                                 </div>
@@ -98,7 +98,7 @@
                                 <div class="col-12">
                                     <label for="formSignupEmail" class="form-label visually-hidden">Correo
                                         electrónico</label>
-                                    <input type="email" class="form-control" id="formSignupEmail" name="correo"
+                                    <input type="email" class="form-control" id="formSignupEmail" name="email"
                                         placeholder="Correo electrónico" required />
                                     <div class="invalid-feedback">Por favor, ingresa el correo electrónico.</div>
                                 </div>
@@ -109,7 +109,7 @@
                                         <label for="formSignupPassword"
                                             class="form-label visually-hidden">Contraseña</label>
                                         <input type="password" class="form-control" id="formSignupPassword"
-                                            name="contraseña" placeholder="Contraseña" required />
+                                            name="password" placeholder="Contraseña" required />
                                         <span><i class="bi bi-eye-slash passwordToggler"></i></span>
                                         <div class="invalid-feedback">Por favor, ingresa la contraseña.</div>
                                     </div>
@@ -119,7 +119,7 @@
                                 <div class="col-12">
                                     <label for="formSignupDireccion"
                                         class="form-label visually-hidden">Dirección</label>
-                                    <input type="text" class="form-control" id="formSignupDireccion" name="direccion"
+                                    <input type="text" class="form-control" id="formSignupDireccion" name="address"
                                         placeholder="Dirección" required />
                                     <div class="invalid-feedback">Por favor, ingresa la dirección.</div>
                                 </div>
@@ -127,14 +127,12 @@
                                 <!-- Campo Teléfono -->
                                 <div class="col-12">
                                     <label for="formSignupTelefono" class="form-label visually-hidden">Teléfono</label>
-                                    <input type="tel" class="form-control" id="formSignupTelefono" name="telefono"
+                                    <input type="tel" class="form-control" id="formSignupTelefono" name="phone"
                                         placeholder="Teléfono" required />
                                     <div class="invalid-feedback">Por favor, ingresa el teléfono.</div>
                                 </div>
 
-                                <!-- Campo Rol (Oculto) -->
-                                <input type="hidden" name="rol_id" value="2"> <!-- Rol por defecto es 'user' -->
-
+                                
                                 <!-- Botón de Registro -->
                                 <div class="col-12 d-grid">
                                     <button type="submit" class="btn btn-primary">Registrar</button>

@@ -29,35 +29,38 @@ class User extends conectarDB {
     }
 
     // Agregar un nuevo usuario
-	 public function agregar_usuario($nombre, $correo, $contraseña, $direccion, $telefono) {
-        $sql = "INSERT INTO Usuarios (nombre, correo, contraseña, direccion, telefono) 
-                VALUES (:nombre, :correo, :contraseña, :direccion, :telefono)";
+    public function agregar_usuario($nombre, $correo, $password, $direccion, $telefono, $rol_id) {
+        $sql = "INSERT INTO Usuarios (nombre, correo, password, direccion, telefono, rol_id) 
+                VALUES (:nombre, :correo, :password, :direccion, :telefono, :rol_id)";
         
         // Hashear la contraseña antes de guardarla
-        $hashedPassword = password_hash($contraseña, PASSWORD_BCRYPT);
+        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
         $guardar = $this->conn_db->prepare($sql);        
         $guardar->bindParam(':nombre', $nombre);    
         $guardar->bindParam(':correo', $correo);    
-        $guardar->bindParam(':contraseña', $hashedPassword);    
+        $guardar->bindParam(':password', $hashedPassword);    
         $guardar->bindParam(':direccion', $direccion);    
-        $guardar->bindParam(':telefono', $telefono);    
-        $guardar->execute();
-        $result = $this->conn_db->lastInsertId();
+        $guardar->bindParam(':telefono', $telefono);
+        $guardar->bindParam(':rol_id', $rol_id); 
+        
+        // Ejecutar y retornar true si fue exitoso, false si no lo fue
+        $resultado = $guardar->execute();
         $guardar->closeCursor();
-        return $result;
+        
+        return $resultado;
     }
 
     // Modificar un usuario existente
-    public function modificar_usuario($id, $nombre, $correo,$contrasena, $direccion, $telefono) {
+    public function modificar_usuario($id, $nombre, $correo, $password, $direccion, $telefono) {
         $sql = "UPDATE Usuarios SET 
-                nombre = :nombre, correo = :correo, contraseña = :contrasena, direccion = :direccion, telefono = :telefono
+                nombre = :nombre, correo = :correo, password = :password, direccion = :direccion, telefono = :telefono
                 WHERE usuario_id = :id";
         $modificar = $this->conn_db->prepare($sql);    
         $modificar->bindParam(':id', $id);        
         $modificar->bindParam(':nombre', $nombre);    
         $modificar->bindParam(':correo', $correo);    
-		$modificar->bindParam(':contrasena', $contrasena);  
+        $modificar->bindParam(':password', $password);  
         $modificar->bindParam(':direccion', $direccion);    
         $modificar->bindParam(':telefono', $telefono);    
         $modificar->execute();                    
@@ -66,9 +69,9 @@ class User extends conectarDB {
         return $result;
     }    
 
-	// Función para validar credenciales de usuario
-    public function validar_credenciales($correo, $contraseña) {
-        $sql = "SELECT usuario_id, contraseña FROM Usuarios WHERE correo = :correo";
+    // Función para validar credenciales de usuario
+    public function validar_credenciales($correo, $password) {
+        $sql = "SELECT usuario_id, password FROM Usuarios WHERE correo = :correo";
         $sentencia = $this->conn_db->prepare($sql);            
         $sentencia->bindParam(':correo', $correo);
         $sentencia->execute();
@@ -76,14 +79,14 @@ class User extends conectarDB {
         $sentencia->closeCursor();
 
         // Verificar si el usuario existe y validar la contraseña
-        if ($usuario && password_verify($contraseña, $usuario['contraseña'])) {
+        if ($usuario && password_verify($password, $usuario['password'])) {
             return true;  
         } else {
-            return password_verify($contraseña, $usuario['contraseña']);  
+            return false;  
         }
     }
 
-	// Método para verificar si el usuario es admin
+    // Método para verificar si el usuario es admin
     public function user_rol($correo) {
         $sql = "SELECT rol_id FROM Usuarios WHERE correo = :correo";
         $sentencia = $this->conn_db->prepare($sql);
@@ -95,6 +98,13 @@ class User extends conectarDB {
         return $usuario && $usuario['rol_id'] === 1; // Retorna true si es admin
     }
 
-   
-
+    public function correo_existe($correo) {
+        $sql = "SELECT COUNT(*) FROM Usuarios WHERE correo = :correo";
+        $consulta = $this->conn_db->prepare($sql);
+        $consulta->bindParam(':correo', $correo);
+        $consulta->execute();
+        
+        // Si el resultado es mayor que 0, el correo ya está registrado
+        return $consulta->fetchColumn() > 0;
+    }
 }

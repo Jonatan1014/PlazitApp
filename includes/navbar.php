@@ -30,7 +30,7 @@
                                     <a class="dropdown-item dropdown-toggle" href="#">My Account</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="pages/account-orders.html">Orders</a></li>
-                                        <li><a class="dropdown-item" href="pages/account-settings.html">Settings</a></li>
+                                        <li><a class="dropdown-item" href="user-account-settings.php">Settings</a></li>
                                         <li><a class="dropdown-item" href="pages/account-address.html">Address</a></li>
                                         <li><a class="dropdown-item" href="pages/account-payment-method.html">Payment Method</a></li>
                                         <li><a class="dropdown-item" href="pages/account-notification.html">Notification</a></li>

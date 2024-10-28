@@ -28,7 +28,7 @@ CREATE TABLE Usuarios (
     usuario_id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
     correo VARCHAR(100) UNIQUE NOT NULL,
-    contraseña VARCHAR(100) NOT NULL,
+    contrasena VARCHAR(100) NOT NULL,
     direccion TEXT,
     telefono VARCHAR(20),
     rol_id INT DEFAULT 2, -- Rol por defecto es 'user'

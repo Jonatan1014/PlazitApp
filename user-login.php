@@ -102,7 +102,7 @@
                            <!-- enlace -->
                            <div>
                               ¿No tienes una cuenta?
-                              <a href="user-regster.php">Regístrate</a>
+                              <a href="user-register.php">Regístrate</a>
                            </div>
                         </div>
                      </form>
