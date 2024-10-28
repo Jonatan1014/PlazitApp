@@ -446,26 +446,9 @@
    <script src="assets/js/vendors/validation.js"></script>
 
    <main>
-      <div class="d-flex justify-content-center align-items-center pt-4">
-         <form action="#">
-            <div class="input-group">
-               <input class="form-control rounded" type="search" placeholder="Buscar productos..." />
-               <span class="input-group-append">
-                  <button class="btn bg-white border border-start-0 ms-n10 rounded-0 rounded-end" type="button">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-search">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                     </svg>
-                  </button>
-               </span>
-            </div>
-         </form>
-      </div>
 
-      </form>
-      </div>
+
+
       <section class="mt-8">
          <div class="container">
             <div class="hero-slider">
@@ -524,9 +507,26 @@
             <div class="d-lg-flex justify-content-between align-items-center pb-4">
 
                <div class="row">
-                  <div class="col-12 mb-6">
-                     <h3 class="mb-0">Popular Products</h3>
+                  <div class="col-12 ">
+                     <h3 class="mb-0">Productos populares</h3>
                   </div>
+               </div>
+               <div class="d-flex justify-content-center align-items-center ">
+                  <form action="#">
+                     <div class="input-group">
+                        <input class="form-control rounded" type="search" placeholder="Buscar productos..." />
+                        <span class="input-group-append">
+                           <button class="btn bg-white border border-start-0 ms-n10 rounded-0 rounded-end" type="button">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-search">
+                                 <circle cx="11" cy="11" r="8"></circle>
+                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                              </svg>
+                           </button>
+                        </span>
+                     </div>
+                  </form>
                </div>
                <div>
                   <!-- select option -->
