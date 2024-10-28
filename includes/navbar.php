@@ -1,16 +1,10 @@
 <!-- barra de navegación -->
 <?php
-session_start(); // Iniciar la sesión
-
-// Verificar si el usuario ha iniciado sesión
-if (!isset($_SESSION['usuario_email'])) {
-    // Si no ha iniciado sesión, redirigir a la página de inicio de sesión
-    header('Location: user-login.php');
-    exit();
-}
-require('includes/class_users.php'); // Asegúrate de incluir la clase correcta
-$user = new User();
-$user = $user->detellesuser_email($_SESSION['usuario_email']); // Obtener los datos de los products
+// session_start(); // Iniciar la sesión
+// require_once('includes/class_users.php'); // Asegúrate de incluir la clase correcta
+// $user = new User();
+// $user = $user->detellesuser_email($_SESSION['usuario_email']);
+// // var_dump($user);
 ?>
 
 <div class="border-bottom">

@@ -1,5 +1,22 @@
 <?php
 
+session_start(); // Iniciar la sesión
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['usuario_email'])) {
+    // Si no ha iniciado sesión, redirigir a la página de inicio de sesión
+    header('Location: user-login.php');
+    exit();
+}
+
+
+
+require('includes/class_users.php'); // Asegúrate de incluir la clase correcta
+$user = new User();
+$user = $user->detellesuser_email($_SESSION['usuario_email']); // Obtener los datos de los products
+
+
+
 require('includes/class_products.php'); // Asegúrate de incluir la clase correcta
 $product = new Product();
 $products = $product->listar_productos(); // Obtener los datos de los products
