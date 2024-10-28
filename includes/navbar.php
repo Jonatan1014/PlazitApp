@@ -20,7 +20,7 @@
 
                         <div class="list-inline-item position-relative me-4">
                             <a class="nav-link dropdown-toggle d-inline" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Cuenta</a>
+                                aria-expanded="false"><?php echo $user['nombre']  ?> </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="pages/signin.html">Iniciar sesión</a></li>
                                 <li><a class="dropdown-item" href="pages/signup.html">Registrarse</a></li>

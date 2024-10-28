@@ -7,6 +7,11 @@ if (!isset($_SESSION['usuario_email'])) {
     header('Location: user-login.php');
     exit();
 }
+require('includes/class_users.php'); // Asegúrate de incluir la clase correcta
+$user = new User();
+$user = $user->detellesuser_email($_SESSION['usuario_email']); // Obtener los datos de los products
+
+
 
 
 

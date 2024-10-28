@@ -100,6 +100,18 @@ class User extends conectarDB {
         return $usuario && $usuario['rol_id'] === 1; // Retorna true si es admin
     }
 
+    // Método para verificar si el usuario es admin
+    public function detellesuser_email($correo) {
+        $sql = "SELECT * FROM Usuarios WHERE correo = :correo";
+        $sentencia = $this->conn_db->prepare($sql);
+        $sentencia->bindParam(':correo', $correo);
+        $sentencia->execute();
+        $usuario = $sentencia->fetch(PDO::FETCH_ASSOC);
+        $sentencia->closeCursor();
+        
+        return $usuario;
+    }
+
     public function correo_existe($correo) {
         $sql = "SELECT COUNT(*) FROM Usuarios WHERE correo = :correo";
         $consulta = $this->conn_db->prepare($sql);
