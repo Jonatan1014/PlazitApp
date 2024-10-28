@@ -27,7 +27,7 @@ if (
         } else {
             echo "<script>
                     alert('Usuario no registrado y/o credenciales incorrectas');
-                    window.location.href = '../login.php';
+                    window.location.href = '../user-login.php';
                   </script>";
             exit(); // Asegurarse de detener la ejecución después de la redirección
         }
@@ -35,7 +35,7 @@ if (
         // Manejar cualquier error que ocurra durante la operación
         echo "<script>
                 alert('Error: " . $e->getMessage() . "');
-                window.location.href = '../login.php';
+                window.location.href = '../user-login.php';
               </script>";
         exit(); // Asegurarse de detener la ejecución después de la redirección
     }
@@ -43,7 +43,7 @@ if (
     // Manejar el caso en que algún campo obligatorio esté vacío
     echo "<script>
             alert('Campos vacios o nulos.');
-            window.location.href = '../login.php';
+            window.location.href = '../user-login.php';
           </script>";
     exit(); // Asegurarse de detener la ejecución después de la redirección
 }

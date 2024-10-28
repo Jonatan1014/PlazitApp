@@ -11,9 +11,7 @@ if (!isset($_SESSION['usuario_email'])) {
 
 
 require('includes/class_products.php'); // Asegúrate de incluir la clase correcta
-
 $product = new Product();
-
 $product = $product->listar_productos(); // Obtener los datos de los products
 
 
