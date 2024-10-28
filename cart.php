@@ -365,7 +365,7 @@
                      </ul>
                      <!-- btn -->
                      <div class="d-flex justify-content-end mt-4">
-                        <a href="#!" class="btn btn-primary">Continuar comprando</a>
+                        <a href="index.php" class="btn btn-primary">Continuar comprando</a>
                      </div>
                   </div>
                </div>
