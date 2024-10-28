@@ -57,7 +57,7 @@
 
                         <!-- Ícono de Carrito -->
                         <div class="list-inline-item position-relative me-4">
-                            <a href="#!" class="text-muted position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            <a href="cart.php" class="text-muted position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                                 role="button" aria-controls="offcanvasRight">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -70,17 +70,7 @@
                             </a>
                         </div>
 
-                        <!-- Botón de Menú para Pantallas Pequeñas -->
-                        <div class="list-inline-item d-inline-block d-lg-none">
-                            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#navbar-default" aria-controls="navbar-default" aria-label="Toggle navigation">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                    class="bi bi-text-indent-left text-primary" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6.354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                                </svg>
-                            </button>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -97,29 +87,7 @@
                             alt="eCommerce HTML Template" /></a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                    <div class="d-block d-lg-none mb-4">
-                        <form action="#">
-                            <div class="input-group">
-                                <input class="form-control rounded" type="search" placeholder="Buscar productos..." />
-                                <span class="input-group-append">
-                                    <button class="btn bg-white border border-start-0 ms-n10 rounded-0 rounded-end"
-                                        type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-search">
-                                            <circle cx="11" cy="11" r="8"></circle>
-                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                        </svg>
-                                    </button>
-                                </span>
-                            </div>
-                        </form>
-
-                    </div>
-
-                </div>
+                
             </div>
         </div>
     </nav>
