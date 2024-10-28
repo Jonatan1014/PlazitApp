@@ -1,3 +1,28 @@
+<?php
+session_start(); // Iniciar la sesión
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION['usuario_email'])) {
+    // Si no ha iniciado sesión, redirigir a la página de inicio de sesión
+    header('Location: login.php');
+    exit();
+}
+
+
+
+require('includes/class_products.php'); // Asegúrate de incluir la clase correcta
+
+$product = new Product();
+
+$product = $product->listar_productos(); // Obtener los datos de los products
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
