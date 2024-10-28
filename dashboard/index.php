@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    
-<!-- Mirrored from freshcart.codescandy.com/dashboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 14:14:43 GMT -->
+<!-- Mirrored from freshcart.codescandy.com/dashboard/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 14:14:43 GMT -->
 <head>
       <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -207,14 +207,14 @@
 <nav class="navbar-vertical-nav d-none d-xl-block">
 	<div class="navbar-vertical">
 		<div class="px-4 py-5">
-			<a href="../index.html" class="navbar-brand">
+			<a href="../index.php" class="navbar-brand">
 				<img src="../assets/images/logo/freshcart-logo.svg" alt="" />
 			</a>
 		</div>
 		<div class="navbar-vertical-content flex-grow-1" data-simplebar="">
 			<ul class="navbar-nav flex-column" id="sideNavbar">
 				<li class="nav-item">
-					<a class="nav-link  active " href="index.html">
+					<a class="nav-link  active " href="index.php">
 						<div class="d-flex align-items-center">
 							<span class="nav-link-icon"><i class="bi bi-house"></i></span>
 							<span class="nav-link-text">Dashboard</span>
@@ -496,7 +496,7 @@
 <nav class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac" tabindex="-1" id="offcanvasExample">
 	<div class="navbar-vertical">
 		<div class="px-4 py-5 d-flex justify-content-between align-items-center">
-			<a href="../index.html" class="navbar-brand">
+			<a href="../index.php" class="navbar-brand">
 				<img src="../assets/images/logo/freshcart-logo.svg" alt="" />
 			</a>
 			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -504,7 +504,7 @@
 		<div class="navbar-vertical-content flex-grow-1" data-simplebar="">
 			<ul class="navbar-nav flex-column">
 				<li class="nav-item">
-					<a class="nav-link  active " href="index.html">
+					<a class="nav-link  active " href="index.php">
 						<div class="d-flex align-items-center">
 							<span class="nav-link-icon"><i class="bi bi-house"></i></span>
 							<span>Dashboard</span>
@@ -1117,5 +1117,5 @@
       <script src="../assets/js/vendors/chart.js"></script>
    </body>
 
-<!-- Mirrored from freshcart.codescandy.com/dashboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 14:14:46 GMT -->
+<!-- Mirrored from freshcart.codescandy.com/dashboard/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 14:14:46 GMT -->
 </html>

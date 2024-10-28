@@ -8,18 +8,18 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <meta content="Codescandy" name="author" />
       <title>Shop Grid 3 Column eCommerce HTML Template - FreshCart</title>
-      <link href="../assets/libs/tiny-slider/dist/tiny-slider.css" rel="stylesheet" />
-      <link href="../assets/libs/nouislider/dist/nouislider.min.css" rel="stylesheet" />
+      <link href="assets/libs/tiny-slider/dist/tiny-slider.css" rel="stylesheet" />
+      <link href="assets/libs/nouislider/dist/nouislider.min.css" rel="stylesheet" />
       <!-- Favicon icon-->
-      <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico" />
 
       <!-- Libs CSS -->
-      <link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-      <link href="../assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
-      <link href="../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+      <link href="assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+      <link href="assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
+      <link href="assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
 
       <!-- Theme CSS -->
-      <link rel="stylesheet" href="../assets/css/theme.min.css" />
+      <link rel="stylesheet" href="assets/css/theme.min.css" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
@@ -130,12 +130,12 @@
             <div class="container">
                <div class="row w-100 align-items-center gx-lg-2 gx-0">
                   <div class="col-xxl-2 col-lg-3 col-md-6 col-5">
-                     <a class="navbar-brand d-none d-lg-block" href="../index.php">
-                        <img src="../assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
+                     <a class="navbar-brand d-none d-lg-block" href="index.php">
+                        <img src="assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
                      </a>
                      <div class="d-flex justify-content-between w-100 d-lg-none">
-                        <a class="navbar-brand" href="../index.php">
-                           <img src="../assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
+                        <a class="navbar-brand" href="index.php">
+                           <img src="assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
                         </a>
                      </div>
                   </div>
@@ -260,7 +260,7 @@
             <div class="container">
                <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-default" aria-labelledby="navbar-defaultLabel">
                   <div class="offcanvas-header pb-1">
-                     <a href="index.php"><img src="../assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" /></a>
+                     <a href="index.php"><img src="assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" /></a>
                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
@@ -374,7 +374,7 @@
                            <li class="nav-item dropdown w-100 w-lg-auto">
                               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
                               <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item" href="../index.php">Home 1</a></li>
+                                 <li><a class="dropdown-item" href="index.php">Home 1</a></li>
                                  <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
                                  <li><a class="dropdown-item" href="index-3.html">Home 3</a></li>
                                  <li><a class="dropdown-item" href="index-4.html">Home 4</a></li>
@@ -445,7 +445,7 @@
                                     </div>
                                     <div class="col-lg-3 col-12 mb-4 mb-lg-0">
                                        <div class="card border-0">
-                                          <img src="../assets/images/banner/menu-banner.jpg" alt="eCommerce HTML Template" class="img-fluid" />
+                                          <img src="assets/images/banner/menu-banner.jpg" alt="eCommerce HTML Template" class="img-fluid" />
                                           <div class="position-absolute ps-6 mt-8">
                                              <h5 class="mb-0">
                                                 Dont miss this
@@ -489,12 +489,12 @@
                               </ul>
                            </li>
                            <li class="nav-item w-100 w-lg-auto">
-                              <a class="nav-link" href="../dashboard/index.php">Dashboard</a>
+                              <a class="nav-link" href="dashboard/index.php">Dashboard</a>
                            </li>
                            <li class="nav-item dropdown w-100 w-lg-auto dropdown-flyout">
                               <a class="nav-link" href="#" id="navbarDropdownDocs" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Docs</a>
                               <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarDropdownDocs">
-                                 <a class="dropdown-item align-items-start" href="../docs/index.php">
+                                 <a class="dropdown-item align-items-start" href="docs/index.php">
                                     <div>
                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-text text-primary" viewBox="0 0 16 16">
                                           <path
@@ -507,7 +507,7 @@
                                        <p class="mb-0 small">Browse the all documentation</p>
                                     </div>
                                  </a>
-                                 <a class="dropdown-item align-items-start" href="../docs/changelog.html">
+                                 <a class="dropdown-item align-items-start" href="docs/changelog.html">
                                     <div>
                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers text-primary" viewBox="0 0 16 16">
                                           <path
@@ -599,7 +599,7 @@
                      <div class="row align-items-center">
                         <div class="col-6 col-md-6 col-lg-7">
                            <div class="d-flex">
-                              <img src="../assets/images/products/product-img-1.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                              <img src="assets/images/products/product-img-1.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
                                  <!-- title -->
                                  <a href="shop-single.html" class="text-inherit">
@@ -655,7 +655,7 @@
                      <div class="row align-items-center">
                         <div class="col-6 col-md-6 col-lg-7">
                            <div class="d-flex">
-                              <img src="../assets/images/products/product-img-2.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                              <img src="assets/images/products/product-img-2.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
                                  <a href="shop-single.html" class="text-inherit">
                                     <h6 class="mb-0">NutriChoice Digestive</h6>
@@ -712,7 +712,7 @@
                      <div class="row align-items-center">
                         <div class="col-6 col-md-6 col-lg-7">
                            <div class="d-flex">
-                              <img src="../assets/images/products/product-img-3.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                              <img src="assets/images/products/product-img-3.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
                                  <!-- title -->
                                  <a href="shop-single.html" class="text-inherit">
@@ -770,7 +770,7 @@
                      <div class="row align-items-center">
                         <div class="col-6 col-md-6 col-lg-7">
                            <div class="d-flex">
-                              <img src="../assets/images/products/product-img-4.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                              <img src="assets/images/products/product-img-4.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
                                  <!-- title -->
                                  <!-- title -->
@@ -829,7 +829,7 @@
                      <div class="row align-items-center">
                         <div class="col-6 col-md-6 col-lg-7">
                            <div class="d-flex">
-                              <img src="../assets/images/products/product-img-5.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
+                              <img src="assets/images/products/product-img-5.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
                                  <!-- title -->
                                  <a href="shop-single.html" class="text-inherit">
@@ -961,7 +961,7 @@
          </div>
       </div>
 
-      <script src="../assets/js/vendors/validation.js"></script>
+      <script src="assets/js/vendors/validation.js"></script>
 
       <main>
          <!-- section-->
@@ -1421,7 +1421,7 @@
                               <!-- Banner Content -->
                               <!-- Banner Image -->
                               <!-- img -->
-                              <img src="../assets/images/banner/assortment-citrus-fruits.png" alt="" class="img-fluid rounded" />
+                              <img src="assets/images/banner/assortment-citrus-fruits.png" alt="" class="img-fluid rounded" />
                               <!-- Banner Image -->
                            </div>
                         </div>
@@ -1509,7 +1509,7 @@
                                     </div>
                                     <a href="shop-single.html">
                                        <!-- img -->
-                                       <img src="../assets/images/products/product-img-1.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+                                       <img src="assets/images/products/product-img-1.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
                                     </a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
@@ -1578,7 +1578,7 @@
 
                                     <a href="shop-single.html">
                                        <!-- img -->
-                                       <img src="../assets/images/products/product-img-2.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+                                       <img src="assets/images/products/product-img-2.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
                                     </a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
@@ -1638,7 +1638,7 @@
                            <div class="card card-product">
                               <div class="card-body">
                                  <div class="text-center position-relative">
-                                    <a href="shop-single.html"><img src="../assets/images/products/product-img-3.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                                    <a href="shop-single.html"><img src="assets/images/products/product-img-3.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
                                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
@@ -1706,7 +1706,7 @@
 
                                     <a href="shop-single.html">
                                        <!-- img -->
-                                       <img src="../assets/images/products/product-img-4.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+                                       <img src="assets/images/products/product-img-4.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
                                     </a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
@@ -1769,7 +1769,7 @@
                            <div class="card card-product">
                               <div class="card-body">
                                  <div class="text-center position-relative">
-                                    <a href="shop-single.html"><img src="../assets/images/products/product-img-5.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                                    <a href="shop-single.html"><img src="assets/images/products/product-img-5.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
                                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
@@ -1836,7 +1836,7 @@
                                     </div>
                                     <a href="shop-single.html">
                                        <!-- img -->
-                                       <img src="../assets/images/products/product-img-6.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+                                       <img src="assets/images/products/product-img-6.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
                                     </a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
@@ -1899,7 +1899,7 @@
                            <div class="card card-product">
                               <div class="card-body">
                                  <div class="text-center position-relative">
-                                    <a href="shop-single.html"><img src="../assets/images/products/product-img-7.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                                    <a href="shop-single.html"><img src="assets/images/products/product-img-7.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
                                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
@@ -1958,7 +1958,7 @@
                            <div class="card card-product">
                               <div class="card-body">
                                  <div class="text-center position-relative">
-                                    <a href="shop-single.html"><img src="../assets/images/products/product-img-8.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                                    <a href="shop-single.html"><img src="assets/images/products/product-img-8.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
                                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
@@ -2020,7 +2020,7 @@
                            <div class="card card-product">
                               <div class="card-body">
                                  <div class="text-center position-relative">
-                                    <a href="shop-single.html"><img src="../assets/images/products/product-img-9.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                                    <a href="shop-single.html"><img src="assets/images/products/product-img-9.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
                                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
@@ -2082,7 +2082,7 @@
                            <div class="card card-product">
                               <div class="card-body">
                                  <div class="text-center position-relative">
-                                    <a href="shop-single.html"><img src="../assets/images/products/product-img-10.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                                    <a href="shop-single.html"><img src="assets/images/products/product-img-10.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                                     <!-- action btn -->
                                     <div class="card-product-action">
                                        <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
@@ -2182,26 +2182,26 @@
                      <div class="col-lg-6">
                         <!-- img slide -->
                         <div class="product productModal" id="productModal">
-                           <div class="zoom" onmousemove="zoom(event)" style="background-image: url(../assets/images/products/product-single-img-1.jpg)">
+                           <div class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/product-single-img-1.jpg)">
                               <!-- img -->
-                              <img src="../assets/images/products/product-single-img-1.jpg" alt="" />
+                              <img src="assets/images/products/product-single-img-1.jpg" alt="" />
                            </div>
                            <div>
-                              <div class="zoom" onmousemove="zoom(event)" style="background-image: url(../assets/images/products/product-single-img-2.jpg)">
+                              <div class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/product-single-img-2.jpg)">
                                  <!-- img -->
-                                 <img src="../assets/images/products/product-single-img-2.jpg" alt="" />
+                                 <img src="assets/images/products/product-single-img-2.jpg" alt="" />
                               </div>
                            </div>
                            <div>
-                              <div class="zoom" onmousemove="zoom(event)" style="background-image: url(../assets/images/products/product-single-img-3.jpg)">
+                              <div class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/product-single-img-3.jpg)">
                                  <!-- img -->
-                                 <img src="../assets/images/products/product-single-img-3.jpg" alt="" />
+                                 <img src="assets/images/products/product-single-img-3.jpg" alt="" />
                               </div>
                            </div>
                            <div>
-                              <div class="zoom" onmousemove="zoom(event)" style="background-image: url(../assets/images/products/product-single-img-4.jpg)">
+                              <div class="zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/product-single-img-4.jpg)">
                                  <!-- img -->
-                                 <img src="../assets/images/products/product-single-img-4.jpg" alt="" />
+                                 <img src="assets/images/products/product-single-img-4.jpg" alt="" />
                               </div>
                            </div>
                         </div>
@@ -2211,25 +2211,25 @@
                               <div class="col-3" class="tns-nav-active">
                                  <div class="thumbnails-img">
                                     <!-- img -->
-                                    <img src="../assets/images/products/product-single-img-1.jpg" alt="" />
+                                    <img src="assets/images/products/product-single-img-1.jpg" alt="" />
                                  </div>
                               </div>
                               <div class="col-3">
                                  <div class="thumbnails-img">
                                     <!-- img -->
-                                    <img src="../assets/images/products/product-single-img-2.jpg" alt="" />
+                                    <img src="assets/images/products/product-single-img-2.jpg" alt="" />
                                  </div>
                               </div>
                               <div class="col-3">
                                  <div class="thumbnails-img">
                                     <!-- img -->
-                                    <img src="../assets/images/products/product-single-img-3.jpg" alt="" />
+                                    <img src="assets/images/products/product-single-img-3.jpg" alt="" />
                                  </div>
                               </div>
                               <div class="col-3">
                                  <div class="thumbnails-img">
                                     <!-- img -->
-                                    <img src="../assets/images/products/product-single-img-4.jpg" alt="" />
+                                    <img src="assets/images/products/product-single-img-4.jpg" alt="" />
                                  </div>
                               </div>
                            </div>
@@ -2413,19 +2413,19 @@
                      <ul class="list-inline mb-0">
                         <li class="list-inline-item text-dark">Payment Partners</li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/amazonpay.svg" alt="" /></a>
+                           <a href="#!"><img src="assets/images/payment/amazonpay.svg" alt="" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/american-express.svg" alt="" /></a>
+                           <a href="#!"><img src="assets/images/payment/american-express.svg" alt="" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/mastercard.svg" alt="" /></a>
+                           <a href="#!"><img src="assets/images/payment/mastercard.svg" alt="" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/paypal.svg" alt="" /></a>
+                           <a href="#!"><img src="assets/images/payment/paypal.svg" alt="" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/visa.svg" alt="" /></a>
+                           <a href="#!"><img src="assets/images/payment/visa.svg" alt="" /></a>
                         </li>
                      </ul>
                   </div>
@@ -2433,10 +2433,10 @@
                      <ul class="list-inline mb-0 text-lg-end text-center">
                         <li class="list-inline-item mb-2 mb-md-0 text-dark">Get deliveries with FreshCart</li>
                         <li class="list-inline-item ms-4">
-                           <a href="#!"><img src="../assets/images/appbutton/appstore-btn.svg" alt="" style="width: 140px" /></a>
+                           <a href="#!"><img src="assets/images/appbutton/appstore-btn.svg" alt="" style="width: 140px" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/appbutton/googleplay-btn.svg" alt="" style="width: 140px" /></a>
+                           <a href="#!"><img src="assets/images/appbutton/googleplay-btn.svg" alt="" style="width: 140px" /></a>
                         </li>
                      </ul>
                   </div>
@@ -2492,19 +2492,19 @@
          </div>
       </footer>
       <!-- Javascript-->
-      <script src="../assets/libs/nouislider/dist/nouislider.min.js"></script>
-      <script src="../assets/libs/wnumb/wNumb.min.js"></script>
+      <script src="assets/libs/nouislider/dist/nouislider.min.js"></script>
+      <script src="assets/libs/wnumb/wNumb.min.js"></script>
       <!-- Libs JS -->
-      <!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script> -->
-      <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+      <!-- <script src="assets/libs/jquery/dist/jquery.min.js"></script> -->
+      <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
 
       <!-- Theme JS -->
-      <script src="../assets/js/theme.min.js"></script>
+      <script src="assets/js/theme.min.js"></script>
 
-      <script src="../assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
-      <script src="../assets/js/vendors/tns-slider.js"></script>
-      <script src="../assets/js/vendors/zoom.js"></script>
+      <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
+      <script src="assets/js/vendors/tns-slider.js"></script>
+      <script src="assets/js/vendors/zoom.js"></script>
    </body>
 
 <!-- Mirrored from freshcart.codescandy.com/pages/shop-grid-3-column.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 28 Oct 2024 14:14:31 GMT -->
