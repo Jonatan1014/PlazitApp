@@ -56,49 +56,6 @@
    <?php
    include("includes/navbar.php");
    ?>
-   <!-- Modal -->
-   <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content p-4">
-            <div class="modal-header border-0">
-               <h5 class="modal-title fs-3 fw-bold" id="userModalLabel">Sign Up</h5>
-
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-               <form class="needs-validation" novalidate>
-                  <div class="mb-3">
-                     <label for="fullName" class="form-label">Name</label>
-                     <input type="text" class="form-control" id="fullName" placeholder="Enter Your Name" required />
-                     <div class="invalid-feedback">Please enter name.</div>
-                  </div>
-                  <div class="mb-3">
-                     <label for="email" class="form-label">Email address</label>
-                     <input type="email" class="form-control" id="email" placeholder="Enter Email address" required />
-                     <div class="invalid-feedback">Please enter email.</div>
-                  </div>
-                  <div class="mb-3">
-                     <label for="password" class="form-label">Password</label>
-                     <input type="password" class="form-control" id="password" placeholder="Enter Password" required />
-                     <div class="invalid-feedback">Please enter password.</div>
-                     <small class="form-text">
-                        By Signup, you agree to our
-                        <a href="#!">Terms of Service</a>
-                        &
-                        <a href="#!">Privacy Policy</a>
-                     </small>
-                  </div>
-
-                  <button type="submit" class="btn btn-primary" type="submit">Sign Up</button>
-               </form>
-            </div>
-            <div class="modal-footer border-0 justify-content-center">
-               Already have an account?
-               <a href="#">Sign in</a>
-            </div>
-         </div>
-      </div>
-   </div>
 
    <!-- Shop Cart -->
 
@@ -489,6 +446,26 @@
    <script src="assets/js/vendors/validation.js"></script>
 
    <main>
+      <div class="d-flex justify-content-center align-items-center pt-4">
+         <form action="#">
+            <div class="input-group">
+               <input class="form-control rounded" type="search" placeholder="Buscar productos..." />
+               <span class="input-group-append">
+                  <button class="btn bg-white border border-start-0 ms-n10 rounded-0 rounded-end" type="button">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-search">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                     </svg>
+                  </button>
+               </span>
+            </div>
+         </form>
+      </div>
+
+      </form>
+      </div>
       <section class="mt-8">
          <div class="container">
             <div class="hero-slider">
@@ -540,7 +517,7 @@
          </div>
       </section>
 
-      
+
       <!-- Popular Products Start-->
       <section class="my-lg-14 my-8">
          <div class="container">
