@@ -47,13 +47,16 @@ if ($result->num_rows > 0) {
                             <span class='text-dark'>{$product['precio']}</span>
                         </div>
                         <div>
-                            <a href='#!' class='btn btn-primary btn-sm'>
-                                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'>
-                                    <line x1='12' y1='5' x2='12' y2='19'></line>
-                                    <line x1='5' y1='12' x2='19' y2='12'></line>
-                                </svg>
-                                Add
-                            </a>
+                            <form action='action/product-add-car.php' method='POST'>
+                                <input type='hidden' name='producto_id' value='{$product['producto_id']}'>
+                                <button type='submit' class='btn btn-primary btn-sm'>
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus'>
+                                        <line x1='12' y1='5' x2='12' y2='19'></line>
+                                        <line x1='5' y1='12' x2='19' y2='12'></line>
+                                    </svg>
+                                    Add
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
