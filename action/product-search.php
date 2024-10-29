@@ -28,7 +28,12 @@ if ($result->num_rows > 0) {
                 <div class='card-body'>
                     <div class='text-center position-relative'>
                         <div class='position-absolute top-0 start-0'>
-                            <button class='btn-action' data-bs-toggle='tooltip' data-bs-html='true' title='Favorito'><i class='bi bi-heart'></i></button>
+                            <form action='action/product-add-favorite.php' method='POST'>
+                                <input type='hidden' name='producto_id' value='{$product['producto_id']}'>
+                                <button type='submit' class='btn-action' data-bs-toggle='tooltip' data-bs-html='true' title='Favorito'>
+                                    <i class='bi bi-heart'></i>
+                                </button>
+                            </form>
                         </div>
                         <a href='#!'>
                             <img src='{$product['imagen_url']}' alt='Grocery Ecommerce Template' class='mb-3 img-fluid' style='width: 150px; height: 150px; object-fit: cover;' />

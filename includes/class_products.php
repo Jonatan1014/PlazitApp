@@ -75,4 +75,19 @@ class Product extends conectarDB {
         $eliminar->closeCursor();
         return $result;
     }
+
+    public function listar_productos_favoritos($usuario_id) {
+        $sql = "SELECT p.producto_id, p.nombre, p.descripcion, p.precio, p.stock, p.imagen_url, lp.cantidad 
+                FROM Lista_Productos lp
+                INNER JOIN Listas_Compra lc ON lp.lista_id = lc.lista_id
+                INNER JOIN Productos p ON lp.producto_id = p.producto_id
+                WHERE lc.usuario_id = :usuario_id";
+        
+        $stmt = $this->conn_db->prepare($sql);
+        $stmt->bindParam(':usuario_id', $usuario_id);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
+
 }
