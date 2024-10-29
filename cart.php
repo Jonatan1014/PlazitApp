@@ -14,6 +14,11 @@ require('includes/class_car.php');   // Clase de carrito
 $user = new User();
 $user = $user->detellesuser_email($_SESSION['usuario_email']);
 
+require('includes/class_products.php'); // Asegúrate de incluir la clase correcta
+$product = new Product();
+$products = $product->listar_productos(); // Obtener los datos de los products
+
+
 // Verificar si se obtuvo un usuario válido
 if (!$user) {
     echo "Error al obtener los datos del user.";

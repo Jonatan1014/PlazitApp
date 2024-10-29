@@ -21,6 +21,12 @@ require('includes/class_products.php'); // Asegúrate de incluir la clase correc
 $product = new Product();
 $products = $product->listar_productos(); // Obtener los datos de los products
 
+
+require('includes/class_car.php');   // Clase de carrito
+// Inicializar clase Car y obtener productos del carrito
+$carrito = new Car();
+$productos_carrito = $carrito->listar_productos_carrito($user['usuario_id']);
+
 ?>
 
 <!DOCTYPE html>

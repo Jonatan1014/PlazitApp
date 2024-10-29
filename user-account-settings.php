@@ -12,7 +12,14 @@ require('includes/class_users.php'); // Asegúrate de incluir la clase correcta
 $user = new User();
 $user = $user->detellesuser_email($_SESSION['usuario_email']); // Obtener los datos de los products
 
+require('includes/class_products.php'); // Asegúrate de incluir la clase correcta
+$product = new Product();
+$products = $product->listar_productos(); // Obtener los datos de los products
 
+require('includes/class_car.php');   // Clase de carrito
+// Inicializar clase Car y obtener productos del carrito
+$carrito = new Car();
+$productos_carrito = $carrito->listar_productos_carrito($user['usuario_id']);
 
 ?>
 
