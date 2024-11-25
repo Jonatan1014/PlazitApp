@@ -55,10 +55,10 @@ if (isset($_POST['producto_id'])) {
         $stmt = $conn->prepare("DELETE FROM Lista_Productos WHERE lista_id = ? AND producto_id = ?");
         $stmt->bind_param("ii", $lista_id, $producto_id);
         if ($stmt->execute()) {
-            echo "<script>
-                    alert('Producto eliminado de favoritos');
-                    window.history.back();
-                  </script>";
+            // echo "<script>
+            //         alert('Producto eliminado de favoritos');
+            //         window.history.back();
+            //       </script>";
         } else {
             echo "<script>
                     alert('Error al eliminar el producto de favoritos');
