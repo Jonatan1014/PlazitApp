@@ -51,21 +51,12 @@ if (isset($_POST['producto_id'])) {
     $stmt->close();
 
     if ($cantidad_existente) {
-        // Actualizar la cantidad si ya existe el producto
-        $stmt = $conn->prepare("UPDATE Lista_Productos SET cantidad = cantidad + 1 WHERE lista_id = ? AND producto_id = ?");
-        $stmt->bind_param("ii", $lista_id, $producto_id);
-        if ($stmt->execute()) {
-            echo "<script>
-                    alert('Cantidad actualizada en favoritos');
-                    window.history.back();
-                  </script>";
-        } else {
-            echo "<script>
-                    alert('Error al actualizar la cantidad');
-                    window.history.back();
-                  </script>";
-        }
-        $stmt->close();
+        
+        echo "<script>
+                alert('Ya se encuentra en favoritos');
+                window.history.back();
+                </script>";
+        
     } else {
         // Insertar el producto si no existe
         $stmt = $conn->prepare("INSERT INTO Lista_Productos (lista_id, producto_id, cantidad) VALUES (?, ?, 1)");

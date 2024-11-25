@@ -56,7 +56,6 @@ $productos_carrito = $carrito->listar_productos_carrito($user['usuario_id']);
                               <th>Producto</th>
                               <th>Descripción</th>
                               <th>Precio</th>
-                              <th>Cantidad</th>
                               <th>Stock</th>
                               <th>Acciones</th>
                            </tr>
@@ -73,7 +72,6 @@ $productos_carrito = $carrito->listar_productos_carrito($user['usuario_id']);
                                     </td>
                                     <td><?php echo htmlspecialchars($producto['descripcion']); ?></td>
                                     <td>$<?php echo number_format($producto['precio'], 2); ?></td>
-                                    <td><?php echo htmlspecialchars($producto['cantidad']); ?></td>
                                     <td>
                                        <?php echo $producto['stock'] > 0 ? '<span class="badge bg-success">En stock</span>' : '<span class="badge bg-danger">Agotado</span>'; ?>
                                     </td>
