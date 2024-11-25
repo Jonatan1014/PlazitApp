@@ -120,11 +120,11 @@ INSERT INTO Roles (nombre) VALUES
 
 -- Inserción de productos
 INSERT INTO Productos (nombre, descripcion, precio, stock, imagen_url, categoria_id) VALUES
-('Manzana Roja', 'Manzanas rojas frescas y jugosas', 1.50, 100, 'https://example.com/images/manzana_roja.jpg', 1),
-('Banana', 'Bananas maduras listas para comer', 0.75, 120, 'https://example.com/images/banana.jpg', 1),
-('Espinaca', 'Espinacas frescas y verdes', 2.00, 80, 'https://example.com/images/espinaca.jpg', 2),
-('Zanahoria', 'Zanahorias frescas y crujientes', 1.20, 90, 'https://example.com/images/zanahoria.jpg', 2),
-('Tomate Orgánico', 'Tomates orgánicos de alta calidad', 3.00, 50, 'https://example.com/images/tomate_organico.jpg', 3);
+('Manzana Roja', 'Manzanas rojas frescas y jugosas', 1.50, 100, 'https://img.freepik.com/psd-gratis/cerca-manzana-aislada_23-2151598148.jpg', 1),
+('Banana', 'Bananas maduras listas para comer', 0.75, 120, 'https://img.freepik.com/vector-gratis/racimo-platano-amarillo-maduro-vector-aislado-sobre-fondo-blanco_1284-45456.jpg', 1),
+('Espinaca', 'Espinacas frescas y verdes', 2.00, 80, 'https://img.freepik.com/fotos-premium/monton-hojas-espinaca_917856-23005.jpg', 2),
+('Zanahoria', 'Zanahorias frescas y crujientes', 1.20, 90, 'https://img.freepik.com/fotos-premium/foto-zanahoria_1254967-2239.jpg', 2),
+('Tomate Orgánico', 'Tomates orgánicos de alta calidad', 3.00, 50, 'https://img.freepik.com/fotos-premium/tomate-png_842076-6388.jpg', 3);
 
 -- Inserción de usuarios con roles
 INSERT INTO Usuarios (nombre, correo, contrasena, direccion, telefono, rol_id) VALUES

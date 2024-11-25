@@ -9,11 +9,9 @@ if (!isset($_SESSION['usuario_email'])) {
 
 require('../includes/class_users.php'); // Clase de usuario
 
-
 // Obtener el usuario actual
 $user = new User();
 $user = $user->detellesuser_email($_SESSION['usuario_email']);
-
 
 // Conectar a la base de datos
 $conn = new mysqli('localhost', 'root', '', 'plazitappbd');
@@ -44,23 +42,47 @@ if (isset($_POST['producto_id'])) {
         $stmt->close();
     }
 
-    // Insertar el producto en la lista de favoritos
-    $stmt = $conn->prepare("INSERT INTO Lista_Productos (lista_id, producto_id) VALUES (?, ?)");
+    // Verificar si el producto ya está en la lista
+    $stmt = $conn->prepare("SELECT cantidad FROM Lista_Productos WHERE lista_id = ? AND producto_id = ?");
     $stmt->bind_param("ii", $lista_id, $producto_id);
-
-    if ($stmt->execute()) {
-        echo "<script>
-                alert('Producto añadido a favoritos');
-                window.history.back();
-              </script>";
-    } else {
-        echo "<script>
-                alert('Error al añadir el producto a favoritos');
-                window.history.back();
-              </script>";
-    }
-
+    $stmt->execute();
+    $stmt->bind_result($cantidad_existente);
+    $stmt->fetch();
     $stmt->close();
+
+    if ($cantidad_existente) {
+        // Actualizar la cantidad si ya existe el producto
+        $stmt = $conn->prepare("UPDATE Lista_Productos SET cantidad = cantidad + 1 WHERE lista_id = ? AND producto_id = ?");
+        $stmt->bind_param("ii", $lista_id, $producto_id);
+        if ($stmt->execute()) {
+            echo "<script>
+                    alert('Cantidad actualizada en favoritos');
+                    window.history.back();
+                  </script>";
+        } else {
+            echo "<script>
+                    alert('Error al actualizar la cantidad');
+                    window.history.back();
+                  </script>";
+        }
+        $stmt->close();
+    } else {
+        // Insertar el producto si no existe
+        $stmt = $conn->prepare("INSERT INTO Lista_Productos (lista_id, producto_id, cantidad) VALUES (?, ?, 1)");
+        $stmt->bind_param("ii", $lista_id, $producto_id);
+        if ($stmt->execute()) {
+            echo "<script>
+                    alert('Producto añadido a favoritos');
+                    window.history.back();
+                  </script>";
+        } else {
+            echo "<script>
+                    alert('Error al añadir el producto a favoritos');
+                    window.history.back();
+                  </script>";
+        }
+        $stmt->close();
+    }
 }
 
 // Cerrar la conexión
