@@ -14,8 +14,8 @@
                         document.getElementById("copyright").appendChild(document.createTextNode(new Date().getFullYear()));
                      </script>
                   </span>
-                  FreshCart eCommerce HTML Template. All rights reserved. Powered by
-                  <a href="https://codescandy.com/">Codescandy</a>
+                  PlazitApp eCommerce . All rights reserved. Powered by
+                  <a href="Electiva">Codescandy</a>
                   .
                </span>
             </div>

@@ -18,7 +18,6 @@ require('includes/class_products.php'); // Asegúrate de incluir la clase correc
 $product = new Product();
 $products = $product->listar_productos(); // Obtener los datos de los products
 
-
 // Verificar si se obtuvo un usuario válido
 if (!$user) {
     echo "Error al obtener los datos del user.";
@@ -99,7 +98,9 @@ foreach ($productos_carrito as $producto) {
                                        </div>
                                     </div>
                                     <div class="col-2 text-lg-end text-start text-md-end col-md-2">
-                                       <span class="fw-bold">$<?php echo number_format($producto['total'], 2); ?></span>
+                                       <span class="fw-bold" data-price="<?php echo htmlspecialchars($producto['precio']); ?>">
+                                          $<?php echo number_format($producto['total'], 2); ?>
+                                       </span>
                                     </div>
                                  </div>
                               </li>
@@ -127,7 +128,7 @@ foreach ($productos_carrito as $producto) {
                         <ul class="list-group list-group-flush">
                            <li class="list-group-item d-flex justify-content-between align-items-start">
                               <div>Subtotal</div>
-                              <span>$<?php echo number_format($subtotal, 2); ?></span>
+                              <span id="subtotal">$<?php echo number_format($subtotal, 2); ?></span>
                            </li>
                            <li class="list-group-item d-flex justify-content-between align-items-start">
                               <div>Descuento</div>
@@ -135,7 +136,7 @@ foreach ($productos_carrito as $producto) {
                            </li>
                            <li class="list-group-item d-flex justify-content-between align-items-start">
                               <div class="fw-bold">Total</div>
-                              <span class="fw-bold">$<?php echo number_format($subtotal, 2); ?></span>
+                              <span id="total" class="fw-bold">$<?php echo number_format($subtotal, 2); ?></span>
                            </li>
                         </ul>
                         <div class="d-grid mt-4">
@@ -154,6 +155,61 @@ foreach ($productos_carrito as $producto) {
    </main>
 
    <?php include("includes/footer.php"); ?>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const quantityInputs = document.querySelectorAll('.quantity-field');
+         const subtotalElement = document.querySelector('#subtotal');
+         const totalElement = document.querySelector('#total');
+
+         function updateTotal() {
+            let newSubtotal = 0;
+
+            // Recorremos todos los productos en el carrito
+            document.querySelectorAll('.list-group-item').forEach(item => {
+               const quantityInput = item.querySelector('.quantity-field');
+               const priceElement = item.querySelector('.fw-bold');
+               const price = parseFloat(priceElement.getAttribute('data-price'));
+               const quantity = parseInt(quantityInput.value);
+
+               if (!isNaN(quantity) && quantity > 0) {
+                  newSubtotal += price * quantity;
+               }
+            });
+
+            // Actualizar el subtotal y el total en el DOM
+            subtotalElement.textContent = `$${newSubtotal.toFixed(2)}`;
+            totalElement.textContent = `$${newSubtotal.toFixed(2)}`;
+         }
+
+         // Agregar eventos a los botones "+" y "-"
+         document.querySelectorAll('.button-plus').forEach(button => {
+            button.addEventListener('click', function () {
+               const input = this.parentElement.querySelector('.quantity-field');
+               input.value = parseInt(input.value) + 1;
+               updateTotal();
+            });
+         });
+
+         document.querySelectorAll('.button-minus').forEach(button => {
+            button.addEventListener('click', function () {
+               const input = this.parentElement.querySelector('.quantity-field');
+               if (parseInt(input.value) > 1) {
+                  input.value = parseInt(input.value) - 1;
+                  updateTotal();
+               }
+            });
+         });
+
+         // También actualizar el total si el usuario modifica la cantidad manualmente
+         quantityInputs.forEach(input => {
+            input.addEventListener('input', updateTotal);
+         });
+
+         // Actualización inicial
+         updateTotal();
+      });
+   </script>
 
    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
    <script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
