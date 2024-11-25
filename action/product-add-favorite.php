@@ -71,10 +71,10 @@ if (isset($_POST['producto_id'])) {
         $stmt = $conn->prepare("INSERT INTO Lista_Productos (lista_id, producto_id, cantidad) VALUES (?, ?, 1)");
         $stmt->bind_param("ii", $lista_id, $producto_id);
         if ($stmt->execute()) {
-            echo "<script>
-                    alert('Producto añadido a favoritos');
-                    window.history.back();
-                  </script>";
+            // echo "<script>
+            //         alert('Producto añadido a favoritos');
+            //         window.history.back();
+            //       </script>";
         } else {
             echo "<script>
                     alert('Error al añadir el producto a favoritos');
