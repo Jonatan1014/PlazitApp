@@ -24,6 +24,8 @@ require('includes/class_car.php');   // Clase de carrito
 $carrito = new Car();
 $productos_carrito = $carrito->listar_productos_carrito($user['usuario_id']);
 
+// var_dump($productos_carrito);
+
 ?>
 
 <!DOCTYPE html>
@@ -70,13 +72,20 @@ $productos_carrito = $carrito->listar_productos_carrito($user['usuario_id']);
                                           <h5 class="fs-6 mb-0"><a href="#" class="text-inherit"><?php echo htmlspecialchars($producto['nombre']); ?></a></h5>
                                        </div>
                                     </td>
-                                    <td><?php echo htmlspecialchars($producto['descripcion']); ?></td>
-                                    <td>$<?php echo number_format($producto['precio'], 2); ?></td>
+                                    <td><?php echo htmlspecialchars($producto['descripcion'] .$producto['producto_id']); ?></td>
+                                    <td>$<?php echo number_format($producto['precio'], 2); ?> </td>
                                     <td>
                                        <?php echo $producto['stock'] > 0 ? '<span class="badge bg-success">En stock</span>' : '<span class="badge bg-danger">Agotado</span>'; ?>
                                     </td>
                                     <td>
-                                       <div class="btn btn-primary btn-sm">Añadir al Carrito</div>
+                                       
+
+                                    <form action="action/product-add-car.php" method="POST">
+    <input type="hidden" name="producto_id" value="<?php echo htmlspecialchars($producto['producto_id']); ?>">
+    <button type="submit" class="btn btn-primary btn-sm">Añadir al Carrito</button>
+</form>
+
+
                                     </td>
                                  </tr>
                               <?php endforeach; ?>

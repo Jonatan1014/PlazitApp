@@ -43,20 +43,29 @@ if (isset($_POST['producto_id'])) {
     }
 
     // Verificar si el producto ya está en la lista
-    $stmt = $conn->prepare("SELECT cantidad FROM Lista_Productos WHERE lista_id = ? AND producto_id = ?");
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM Lista_Productos WHERE lista_id = ? AND producto_id = ?");
     $stmt->bind_param("ii", $lista_id, $producto_id);
     $stmt->execute();
-    $stmt->bind_result($cantidad_existente);
+    $stmt->bind_result($exists);
     $stmt->fetch();
     $stmt->close();
 
-    if ($cantidad_existente) {
-        
-        echo "<script>
-                alert('Ya se encuentra en favoritos');
-                window.history.back();
-                </script>";
-        
+    if ($exists) {
+        // Eliminar el producto si ya está en la lista
+        $stmt = $conn->prepare("DELETE FROM Lista_Productos WHERE lista_id = ? AND producto_id = ?");
+        $stmt->bind_param("ii", $lista_id, $producto_id);
+        if ($stmt->execute()) {
+            echo "<script>
+                    alert('Producto eliminado de favoritos');
+                    window.history.back();
+                  </script>";
+        } else {
+            echo "<script>
+                    alert('Error al eliminar el producto de favoritos');
+                    window.history.back();
+                  </script>";
+        }
+        $stmt->close();
     } else {
         // Insertar el producto si no existe
         $stmt = $conn->prepare("INSERT INTO Lista_Productos (lista_id, producto_id, cantidad) VALUES (?, ?, 1)");
